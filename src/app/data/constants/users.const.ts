@@ -6,7 +6,7 @@ export const USERS_DATA: ICardUser[] = [
     name: 'Kwijibo Klander',
     age: 36,
     description: 'Fullstack Developer',
-    avatar: 'https://i.redd.it/afhscf5yjrp51.jpg',
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3i_qZtrjSgoPCyIOywhlX8MKOzRIaQbKU0A&usqp=CAU',
     work: 'Project Manager'
   },
   {
@@ -14,7 +14,7 @@ export const USERS_DATA: ICardUser[] = [
     name: 'Kwijibo Fernandez',
     age: 36,
     description: 'Fullstack Developer',
-    avatar: 'https://i.redd.it/afhscf5yjrp51.jpg',
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6zes53m4a_2VLTcmTn_bHk8NO5SkuWfcQbg&usqp=CAU',
     work: 'A large text that will deform the user cards then..'
   },
   {
@@ -22,14 +22,14 @@ export const USERS_DATA: ICardUser[] = [
     name: 'Kwijibo Asis',
     age: 36,
     description: 'Fullstack Developer',
-    avatar: 'https://i.redd.it/afhscf5yjrp51.jpg',
+    avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU',
   },
   {
     id: 4,
     name: 'Kwijibo Tresmelenguer',
     age: 36,
     description: 'Fullstack Developer',
-    avatar: 'https://i.redd.it/afhscf5yjrp51.jpg',
+    avatar: 'https://i.pinimg.com/originals/7d/1a/3f/7d1a3f77eee9f34782c6f88e97a6c888.jpg',
   },
   {
     id: 5,
