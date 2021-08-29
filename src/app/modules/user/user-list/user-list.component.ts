@@ -13,7 +13,15 @@ export class UserListComponent implements OnInit {
       name: 'Kwijibo Klander',
       age: 36,
       description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png'
+      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png',
+      work: 'Project Manager'
+    },
+    {
+      name: 'Kwijibo Klander',
+      age: 36,
+      description: 'Fullstack Developer',
+      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png',
+      work: 'A large text that will deform the user cards then..'
     },
     {
       name: 'Kwijibo Klander',
@@ -31,13 +39,9 @@ export class UserListComponent implements OnInit {
       name: 'Kwijibo Klander',
       age: 36,
       description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png'
-    },
-    {
-      name: 'Kwijibo Klander',
-      age: 36,
-      description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png'
+      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png',
+      work: 'A large text that will deform the user cards then what would happen when they are in different rows?'
+
     }
   ];
 

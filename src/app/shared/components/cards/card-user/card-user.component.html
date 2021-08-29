@@ -4,7 +4,8 @@
     </div>
     <div class="mbp-card_info">
         <h2>{{data.name}}</h2>
-        <h5>Edad: {{data.age}}</h5>
+        <h5>Age: {{data.age}}</h5>
         <p>{{data.description}}</p>
+        <p *ngIf="data.work">{{data.work}}</p>
     </div>
 </div>
