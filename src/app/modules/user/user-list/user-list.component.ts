@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { USERS_DATA } from '@data/constants/users.const';
 import { ICardUser } from '@shared/components/cards/card-user/icard-user.metadata';
 
 @Component({
@@ -8,42 +9,7 @@ import { ICardUser } from '@shared/components/cards/card-user/icard-user.metadat
 })
 export class UserListComponent implements OnInit {
 
-  public users: ICardUser[] = [
-    {
-      name: 'Kwijibo Klander',
-      age: 36,
-      description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png',
-      work: 'Project Manager'
-    },
-    {
-      name: 'Kwijibo Klander',
-      age: 36,
-      description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png',
-      work: 'A large text that will deform the user cards then..'
-    },
-    {
-      name: 'Kwijibo Klander',
-      age: 36,
-      description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png'
-    },
-    {
-      name: 'Kwijibo Klander',
-      age: 36,
-      description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png'
-    },
-    {
-      name: 'Kwijibo Klander',
-      age: 36,
-      description: 'Fullstack Developer',
-      avatar: 'https://pickaface.net/gallery/avatar/ScottWhitehead51e40730c8b87.png',
-      work: 'A large text that will deform the user cards then what would happen when they are in different rows?'
-
-    }
-  ];
+  public users: ICardUser[] = USERS_DATA;
 
   constructor() { }
 

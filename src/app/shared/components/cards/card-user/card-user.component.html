@@ -1,8 +1,8 @@
-<div class="mbp-card" *ngIf="data">
-    <div class="mbp-card_img">
+<div class="mbp-card" *ngIf="data" routerLink="/panel/user/{{data.id}}">
+    <div class="mbp-card-img">
         <img src="{{data.avatar}}" alt="{{data.name}}-avatar">
     </div>
-    <div class="mbp-card_info">
+    <div class="mbp-card-info">
         <h2>{{data.name}}</h2>
         <h5>Age: {{data.age}}</h5>
         <p>{{data.description}}</p>

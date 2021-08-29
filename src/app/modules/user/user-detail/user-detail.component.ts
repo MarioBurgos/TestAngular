@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { USERS_DATA } from '@data/constants/users.const';
+import { ICardUser } from '@shared/components/cards/card-user/icard-user.metadata';
 
 @Component({
   selector: 'app-user-detail',
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.scss']
 })
-export class UserDetailComponent implements OnInit {
+export class UserDetailComponent {
 
-  constructor() { }
+  public users: ICardUser[] = USERS_DATA;
+  public currentUser?: ICardUser;
+  id: number;
 
-  ngOnInit(): void {
+  constructor(
+    private route: ActivatedRoute
+  ) {
+    this.id = +this.route.snapshot.params.id;
+    this.currentUser = this.users.find(user => user.id === this.id);
+    console.log(this.currentUser);
   }
-
 }

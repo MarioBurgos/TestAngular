@@ -1,1 +1,17 @@
-<app-title-h1 text="USER DETAIL" type="dark"></app-title-h1>
+<div class="row py-5">
+    <div class="col-12 col-md-5 col-lg-4 col-xl-3 px-5 py-3 text-center">
+        <img class="mbp-user-img" src="{{currentUser?.avatar}}" alt="{{currentUser?.name}}-Profile-Photo">
+    </div>
+    <div class="col-12 col-md-7 col-lg-8 col-xl-9 px-5">
+        <div class="col-12 border-bottom py-2">
+            <app-title-h2 text="Detail of: {{currentUser?.name | uppercase}}" type="primary"></app-title-h2>
+        </div>
+        <div class="col-12 border-bottom py-2">
+            <app-title-h3 text="Age: {{currentUser?.age}}" type="secondary"></app-title-h3>
+            <app-title-h3 text="Work: {{currentUser?.work ? currentUser?.work: 'Unemployed'}}" type="secondary"></app-title-h3>
+        </div>
+        <div class="col-12 border-bottom py-2">
+            <p class="text-secondary">{{ currentUser?.description }}</p>
+        </div>
+    </div>
+</div>
