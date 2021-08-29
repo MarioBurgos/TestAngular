@@ -1,6 +1,21 @@
-<div class="row">
+<!-- <div class="row">
     <div class="col-12">
         <app-title-h1 text="USERS LIST" type="dark"></app-title-h1>
     </div>
-    <app-card-user [data]="user" *ngFor="let user of users;" class="col-12 col-md-6 col-lg-4"></app-card-user>
+    <div class="col-12" *ngIf="users;else loaderComponent;">
+        <app-card-user [data]="user" *ngFor="let user of users;" class="col-12 col-md-6 col-lg-4"></app-card-user>
+    </div>
+    <ng-template #loaderComponent>
+        <div class="col-12 text-center">
+            <img src="https://i.gifer.com/YCZH.gif" alt="loading-gif">
+        </div>
+    </ng-template>
+</div> -->
+
+<div class="container-fluid px-0">
+    <div class="row bg-dark h-100">
+        <div class="col-12 px-0">
+            <app-carousel [items]="carouselData"></app-carousel>
+        </div>
+    </div>
 </div>

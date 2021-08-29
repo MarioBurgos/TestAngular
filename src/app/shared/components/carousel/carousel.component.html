@@ -1,0 +1,19 @@
+<div class="mbp-carousel" [ngStyle]="{ 'min-height' : finalHeight }">
+    <div class="mbp-carousel-btns">
+        <i class="fas fa-chevron-circle-left" (click)="setBack()"></i>
+        <i class="fas fa-chevron-circle-right" (click)="setNext()"></i>
+    </div>
+    <div class="mbp-carousel-content">
+        <ng-container *ngFor="let section of items;">
+            <div class="mbp-carousel-content-item" [ngStyle]="{'background-image': 'url('+ section.image +')', 'margin-left': section.marginLeft + '%' }">
+                <h1>{{section.title?.first}}<span>{{section.title?.second}}</span></h1>
+                <p>{{section.subtitle}}</p>
+            </div>
+        </ng-container>
+    </div>
+    <div class="mbp-carousel-steps">
+        <div class="mbp-carousel-steps-step mbp-carousel-steps-step{{ currentPosition === item.id ? '-active' : '' }}" *ngFor="let item of items" (click)="setCurrentPosition(item.id)">
+
+        </div>
+    </div>
+</div>

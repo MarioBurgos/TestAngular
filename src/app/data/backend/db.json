@@ -1,10 +1,17 @@
 {
     "users": [{
+            "id": "0",
+            "name": "Kwijibo Pitikly",
+            "age": "36",
+            "description": "Data Analyst",
+            "avatar": "https://livebiography.com/wp-content/uploads/2018/08/John-Cena-Profile.jpg",
+            "work": "Developer"
+        }, {
             "id": "1",
             "name": "Kwijibo Klander",
             "age": "36",
             "description": "Fullstack Developer",
-            "avatar": "https: //i.redd.it/afhscf5yjrp51.jpg",
+            "avatar": "https://img.uefa.com/imgml/TP/players/1/2011/324x324/95803.jpg",
             "work": "Project Manager"
         },
         {
@@ -12,7 +19,7 @@
             "name": "Kwijibo Fernandez",
             "age": "36",
             "description": "Fullstack Developer",
-            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3i_qZtrjSgoPCyIOywhlX8MKOzRIaQbKU0A&usqp=CAU",
+            "avatar": "https://www.show.news/__export/1590631859109/sites/debate/img/2020/05/27/henry-cavill_crop1590630914761.jpg_1694538543.jpg",
             "work": "A large text that will deform the user cards then.."
         },
         {
@@ -34,7 +41,7 @@
             "name": "Kwijibo Paracuato",
             "age": "36",
             "description": "Fullstack Developer",
-            "avatar": "https://i.pinimg.com/originals/7d/1a/3f/7d1a3f77eee9f34782c6f88e97a6c888.jpg",
+            "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgzJoPcADJtpaQZDMh49p6HTJCnE-S7vlyfA&usqp=CAU",
             "work": "A large text that will deform the user cards then what would happen when they are in different rows?"
         }
     ]
