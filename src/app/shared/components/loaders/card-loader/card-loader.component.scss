@@ -1,0 +1,32 @@
+.mbp-card-loader {
+    width: 100%;
+    border: 1px double #DCDADA;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    &-img,
+    &-text {
+        background: #DCDADA;
+        animation: load 0.75s infinite linear;
+    }
+    &-img {
+        border-radius: 100%;
+    }
+    &-text {
+        border-radius: 10px;
+        margin: 8px 0;
+    }
+}
+
+@keyframes load {
+    0% {
+        background: #DCDADA;
+    }
+    50% {
+        background: #C4C4C4;
+    }
+    100% {
+        background: #DCDADA;
+    }
+}

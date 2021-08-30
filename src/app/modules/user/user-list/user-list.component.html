@@ -1,8 +1,29 @@
-<!-- <div class="row">
+<div class="row">
     <div class="col-12">
         <app-title-h1 text="USERS LIST" type="dark"></app-title-h1>
     </div>
-    <div class="col-12" *ngIf="users;else loaderComponent;">
+    <ng-container *ngIf="users; else usersLoader">
+        <app-card-user [data]="user" *ngFor="let user of users;" class="col-12 col-md-6 col-lg-4"></app-card-user>
+    </ng-container>
+    <!------------------------------------------------------------------------------------------------------------
+      Init Loader of card user
+     ------------------------------------------------------------------------------------------------------------>
+    <ng-template #usersLoader>
+        <app-card-loader class="col-12 col-md-6 col-lg-4" [bars]="4" [imageSize]="75" [barHeight]="15" *ngFor="let i of [0, 1, 2, 3, 4, 5]"></app-card-loader>
+    </ng-template>
+    <!------------------------------------------------------------------------------------------------------------
+      End Loader of card user
+     ------------------------------------------------------------------------------------------------------------>
+
+
+
+
+
+
+    <!-- (*1) STARTS HERE: THIS CREATES A COMPONENT ON THE FLY: --------------------------------------------------------------------
+      this is a "loading..." image.gif that is shown while the cards are being loaded ---------------------------------------------->
+
+    <!-- <div class="col-12" *ngIf="users;else loaderComponent;">
         <app-card-user [data]="user" *ngFor="let user of users;" class="col-12 col-md-6 col-lg-4"></app-card-user>
     </div>
     <ng-template #loaderComponent>
@@ -11,11 +32,17 @@
         </div>
     </ng-template>
 </div> -->
+    <!-- (*1)ENDS HERE ------------------------------------------------------------------------------------------------------------->
 
-<div class="container-fluid px-0">
+
+
+    <!-- (*2) STARTS HERE:  THIS LOADS THE CAROUSEL COMPONENT ---------------------------------------------------------------------->
+
+    <!-- <div class="container-fluid px-0">
     <div class="row bg-dark h-100">
         <div class="col-12 px-0">
             <app-carousel [items]="carouselData"></app-carousel>
         </div>
     </div>
-</div>
+</div> -->
+    <!-- (*2) ENDS HERE ----------------------------------------------------------------------------------------------------------->
