@@ -12,7 +12,7 @@ import { ICarouselItem } from '@shared/components/carousel/icarousel-item.metada
 })
 export class UserListComponent implements OnInit {
 
-  public carouselData: ICarouselItem[] = CAROUSEL_DATA_ITEMS;
+  //public carouselData: ICarouselItem[] = CAROUSEL_DATA_ITEMS;
   public users?: ICardUser[];// = USERS_DATA;
 
   constructor(

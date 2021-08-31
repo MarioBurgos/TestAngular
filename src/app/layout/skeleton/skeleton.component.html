@@ -1,5 +1,13 @@
 <app-navigation></app-navigation>
 <div class="container-fluid mbp-skeleton-content">
-    <router-outlet></router-outlet>
+    <div class="row">
+        <div class="col-md-2 px-0 pb-0">
+            <app-side-bar></app-side-bar>
+        </div>
+        <div class="col-md-10 px-0">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
 </div>
+
 <app-footer></app-footer>

@@ -4,50 +4,50 @@ export const CAROUSEL_DATA_ITEMS: ICarouselItem[] = [
   {
     id: 1,
     title: {
-      first: 'TITULO',
-      second: 'primero',
+      first: 'Panel',
+      second: 'Home',
     },
-    subtitle: 'Esto es un gran Subtítulo',
+    subtitle: 'This is a subtitle',
     link: '/',
     image: 'https://www.wallpapertip.com/wmimgs/0-236_440px-animated-wallpaper-windows.png'
   },
   {
     id: 2,
     title: {
-      first: 'TITULO',
-      second: 'segundo',
+      first: 'Lorem',
+      second: 'Ipsum',
     },
-    subtitle: 'Esto es un gran Subtítulo',
+    subtitle: 'dolor sit amet',
     link: '/',
     image: 'https://cdn.wallpapersafari.com/2/29/fdr5Z7.jpg'
   },
   {
     id: 3,
     title: {
-      first: 'TITULO',
-      second: 'tercero',
+      first: 'Lorem',
+      second: 'Ipsum',
     },
-    subtitle: 'Esto es un gran Subtítulo',
+    subtitle: 'dolor sit amet',
     link: '/',
     image: 'https://a-static.besthdwallpaper.com/retro-artistico-papel-pintado-800x600-32228_17.jpg'
   },
   {
     id: 4,
     title: {
-      first: 'TITULO',
-      second: 'cuarto',
+      first: 'Lorem',
+      second: 'Ipsum',
     },
-    subtitle: 'Esto es un gran Subtítulo',
+    subtitle: 'dolor sit amet',
     link: '/',
     image: 'https://a-static.besthdwallpaper.com/playa-3d-papel-pintado-800x600-73_17.jpg'
   },
   {
     id: 5,
     title: {
-      first: 'TITULO',
-      second: 'quinto',
+      first: 'Lorem',
+      second: 'Ipsum',
     },
-    subtitle: 'Esto es un gran Subtítulo',
+    subtitle: 'dolor sit amet',
     link: '/',
     image: 'https://www.gdargaud.net/Photo/800/20051224_0255_MtCookRoad.jpg'
   },

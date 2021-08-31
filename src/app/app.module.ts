@@ -9,13 +9,15 @@ import { SharedModule } from './shared/shared.module';
 import { SkeletonComponent } from './layout/skeleton/skeleton.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavigationComponent } from './layout/navigation/navigation.component';
+import { SideBarComponent } from './layout/side-bar/side-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SkeletonComponent,
     FooterComponent,
-    NavigationComponent
+    NavigationComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,

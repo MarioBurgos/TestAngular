@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SideBarComponent } from '@layout/side-bar/side-bar.component';
 
 @Component({
   selector: 'app-navigation',
@@ -10,6 +11,11 @@ export class NavigationComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSideBar(){
+
+
   }
 
 }

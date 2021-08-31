@@ -9,7 +9,7 @@
         "build:dev": "ng build --c=development",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "backend": "json-server --watch ./src/app/data/backend/db.json"
+        "backend": "json-server --delay 500 --watch ./src/app/data/backend/db.json"
     },
     "private": true,
     "dependencies": {

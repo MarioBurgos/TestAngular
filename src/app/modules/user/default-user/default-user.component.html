@@ -1,0 +1,12 @@
+<div class="container-fluid p-5">
+
+    <button class="btn btn-danger mr-2" (click)="showError()">ERROR</button>
+    <button class="btn btn-success mr-2" (click)="showSuccess()">SUCCESS</button>
+    <br><br>
+
+    <div class="mbp-error" [ngStyle]="style" *ngIf="isShow">
+        {{ message }}
+    </div>
+
+
+</div>

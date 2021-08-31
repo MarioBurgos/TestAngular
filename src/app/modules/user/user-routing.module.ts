@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DefaultUserComponent } from './default-user/default-user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserListComponent } from './user-list/user-list.component';
 
@@ -9,10 +10,13 @@ const routes: Routes = [
     component: UserListComponent
   },
   {
+    path: 'default',
+    component: DefaultUserComponent
+  },
+  {
     path: ':id',
     component: UserDetailComponent
-  },
-
+  }
 ];
 
 @NgModule({

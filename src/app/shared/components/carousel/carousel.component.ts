@@ -11,7 +11,7 @@ export class CarouselComponent implements OnInit {
   /**
    * Custom Properties
    */
-  @Input() height = 500;
+  @Input() height = 600;
   @Input() isFullScreen = false;
   @Input() items: ICarouselItem[] = [];
 

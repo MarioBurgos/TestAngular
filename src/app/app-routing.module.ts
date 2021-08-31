@@ -5,7 +5,7 @@ import { SkeletonComponent } from '@layout/skeleton/skeleton.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/panel/user',
+    redirectTo: '/panel/home',
     pathMatch: 'full'
   },
   {
@@ -17,15 +17,14 @@ const routes: Routes = [
         loadChildren: ()=> import('@modules/user/user.module').then((m)=>m.UserModule)
       },
       {
-        path: '**',
-        redirectTo: '/panel/user',
-        pathMatch: 'full'
+        path: 'home',
+        loadChildren: ()=> import('@modules/pages/pages.module').then((n)=>n.PagesModule)
       }
     ]
   },
   {
     path: '**',
-    redirectTo: '/panel/user',
+    redirectTo: '/panel/home',
     pathMatch: 'full'
   }
 ];

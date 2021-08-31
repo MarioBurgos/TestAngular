@@ -5,6 +5,13 @@
     <div class="mbp-card-info">
         <h2>{{data.name}}</h2>
         <h5>Age: {{data.age}}</h5>
+        <p>Gender:
+            <ng-container [ngSwitch]="data.gender">
+                <span *ngSwitchCase="'M'">Male</span>
+                <span *ngSwitchCase="'F'">Female</span>
+                <span *ngSwitchDefault> - </span>
+            </ng-container>
+        </p>
         <p>{{data.description}}</p>
         <p *ngIf="data.work">{{data.work}}</p>
     </div>
