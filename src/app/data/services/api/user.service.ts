@@ -11,12 +11,24 @@ import { catchError, map } from 'rxjs/operators';
 })
 export class UserService extends ApiClass {
 
+  private title:string;
 
   constructor(
     http: HttpClient
   ) {
     super(http);
+    this.title = "Original Title from user.service"
   }
+  get getTitle(): string {
+    return this.title;
+  }
+  setTitle(t: string) {
+    this.title = t;
+  }
+  clearTitle() {
+    this.title = "empty title"
+  }
+
 
   /**
    * Get all users from API
@@ -44,19 +56,19 @@ export class UserService extends ApiClass {
    * @param id: number
    * @returns
    */
-  getUserById(id:number): Observable<{
+  getUserById(id: number): Observable<{
     error: boolean,
     msg: string,
     data: ICardUser
   }> {
     const response = { error: false, msg: '', data: {} as ICardUser };
     return this.http.get<ICardUser>(this.url + 'users/' + id)
-    .pipe(map( r => {
-      response.data = r;
-      return response;
-    }),
-    catchError(() => of(response))
-    );
+      .pipe(map(r => {
+        response.data = r;
+        return response;
+      }),
+        catchError(() => of(response))
+      );
   }
 
 }

@@ -1,6 +1,6 @@
 <div class="row px-3 py-5">
     <div class="col-12">
-        <app-title-h1 text="USERS LIST" type="dark"></app-title-h1>
+        <app-title-h1 [text]="title" type="dark"></app-title-h1>
     </div>
     <ng-container *ngIf="users; else usersLoader">
         <app-card-user [data]="user" *ngFor="let user of users;" class="col-12 col-md-6 col-lg-4"></app-card-user>

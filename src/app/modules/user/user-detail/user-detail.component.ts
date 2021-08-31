@@ -13,13 +13,15 @@ export class UserDetailComponent implements OnInit {
 
   public users: ICardUser[] = [];// = USERS_DATA;
   public currentUser?: ICardUser;
-  id: number;
+  public id: number;
+  public title:string;
 
   constructor(
     private route: ActivatedRoute,
     private userService: UserService
   ) {
     this.id = +this.route.snapshot.params.id;
+    this.title = userService.getTitle;
     // this.currentUser = this.users.find(user => user.id === this.id);
     // console.log(this.currentUser);
   }
