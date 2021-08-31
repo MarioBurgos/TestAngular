@@ -1,12 +1,34 @@
-<div class="container-fluid p-5">
+<div class="container-fluid p-3">
 
-    <button class="btn btn-danger mr-2" (click)="showError()">ERROR</button>
-    <button class="btn btn-success mr-2" (click)="showSuccess()">SUCCESS</button>
-    <br><br>
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-primary border-bottom pb-1">[ngClass]</h2>
+        </div>
+        <div class="col-12">
+            <div class="d-flex flex-wrap justify-content-md-start">
 
-    <div class="mbp-error" [ngStyle]="style" *ngIf="isShow">
-        {{ message }}
+                <ng-container *ngFor="let card of cards;">
+                    <div [ngClass]="{
+                    'mbp-card': true,
+                    'mbp-card-primary': card.isPrimary,
+                    'mbp-card-secondary': !card.isPrimary,
+                    'mbp-card-disabled': card.isDisabled
+                  }">
+                        <div class="mbp-card-title">
+                            <h2>{{ card.title }}</h2>
+                        </div>
+                        <div class="mbp-card-body">
+                            {{card.body || "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum maiores illum quae nemo in error modi laborum quas unde et, sapiente non amet eius totam fugiat consequuntur neque quibusdam assumenda?"}}
+                        </div>
+                        <div class="mbp-card-actions ">
+                            <button class="btn btn-primary" (click)="changeStatus(card)">Change Status</button>
+                            <button class="btn btn-dark" (click)="disableCard(card)">{{card.isDisabled ? 'Enable' : 'Disable'}}</button>
+                        </div>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
     </div>
-
 
 </div>

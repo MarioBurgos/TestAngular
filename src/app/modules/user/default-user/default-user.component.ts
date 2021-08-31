@@ -7,44 +7,72 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultUserComponent implements OnInit {
 
-  public message:string = "";
-  public isShow = false;
-  public style = {
-    background: 'red',
-    borderRadius: '5px',
-    width: '50%',
-    padding: '5px',
-    color: '#FFFFFF',
-    fontWeight: '600',
-  }
+  public cards: {
+    title: string;
+    body?: string;
+    isPrimary: boolean;
+    isDisabled: boolean;
+  }[] = [
+      {
+        title: "Card Primary",
+        isPrimary: true,
+        isDisabled: false,
+      },
+      {
+        title: "Card Primary",
+        isPrimary: true,
+        isDisabled: false,
+      },
+      {
+        title: "Card Primary",
+        isPrimary: true,
+        isDisabled: false,
+      },
+      {
+        title: "Card Primary",
+        isPrimary: true,
+        isDisabled: false,
+      },
+      {
+        title: "Card Primary",
+        isPrimary: true,
+        isDisabled: false,
+      },
+      {
+        title: "Card Secondary",
+        isPrimary: false,
+        isDisabled: false,
+      },
+      {
+        title: "Card Disabled",
+        body: "This card is disabled",
+        isPrimary: true,
+        isDisabled: true,
+      },
 
+    ];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  showError(){
-    this.style.background = 'red';
-    this.message = '* ERROR !';
-    this.isShow = true;
-    setTimeout(() => {
-      this.toggleIsShow();
-    }, 1000);
-
+  changeStatus(card: {
+    title: string;
+    body?: string;
+    isPrimary: boolean;
+    isDisabled: boolean;
+  }){
+    card.isPrimary = !card.isPrimary;
+  }
+  disableCard(card: {
+    title: string;
+    body?: string;
+    isPrimary: boolean;
+    isDisabled: boolean;
+  }){
+    card.isDisabled = !card.isDisabled;
   }
 
-  showSuccess(){
-    this.style.background = 'green';
-    this.message = '* SUCCESS !';
-    this.isShow = true;
-    setTimeout(() => {
-      this.toggleIsShow();
-    }, 1000);
-  }
-
-  toggleIsShow(){
-    this.isShow = !this.isShow;
-  }
 
 }

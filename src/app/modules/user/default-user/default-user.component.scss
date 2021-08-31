@@ -1,0 +1,42 @@
+.mbp-card {
+    border-width: 1px;
+    max-width: 250px;
+    min-width: 150px;
+    padding: 0.25rem 1rem;
+    border-radius: 5px;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: 0.2s all ease-in;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &-title {
+        border-bottom: 1px solid #FFFFFF;
+        margin-bottom: 0.5rem;
+    }
+    &-body {
+        font-size: 0.9rem;
+        text-align: justify;
+        margin-bottom: 1rem;
+    }
+    &-actions {
+        display: flex;
+        justify-content: space-between;
+        vertical-align: bottom;
+    }
+    &-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        &:hover {
+            transform: none;
+        }
+    }
+    &-primary {
+        background: rgb(55, 120, 255);
+        color: #FFFFFF;
+    }
+    &-secondary {
+        background: rgb(210, 200, 200);
+        color: #000000;
+    }
+}
