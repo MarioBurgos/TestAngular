@@ -15,8 +15,10 @@ export class UserListComponent implements OnInit, OnDestroy {
 
   //public carouselData: ICarouselItem[] = CAROUSEL_DATA_ITEMS;
   public users: ICardUser[];// = USERS_DATA;
-  public userSubscription: any;
+  public userSubscription: Subscription | undefined;
   public title:string;
+
+  public priceEuros: number;
 
   constructor(
     private userService: UserService
@@ -24,6 +26,8 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.users = [];
     this.userService.setTitle("Component UserList");
     this.title = this.userService.getTitle;
+
+    this.priceEuros = 0;
   }
   ngOnDestroy(): void {
     if(this.userSubscription){
@@ -37,9 +41,16 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.getUsers();
   }
 
+
+  addEuros(){
+    this.priceEuros += 10;
+  }
+
   getUsers() {
     this.userSubscription = this.userService
       .getAllUsers()
       .subscribe(r => this.users = (r.error) ? [] : r.data);
   }
+
+
 }
