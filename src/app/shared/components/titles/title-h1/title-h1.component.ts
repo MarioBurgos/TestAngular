@@ -11,9 +11,6 @@ export class TitleH1Component implements OnInit, DoCheck {
   @Input() type: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'dark';
   @Input() priceEuros: number;
 
-  @Input() data: Array<any> = []
-
-
   public priceDollar: number;
   public priceYen: number;
 
@@ -28,11 +25,6 @@ export class TitleH1Component implements OnInit, DoCheck {
   ngDoCheck(): void {
     this.priceDollar = this.priceEuros * this.getCurrentDollarValueFromApi();
     this.priceYen = this.priceEuros * this.getCurrentYenValueFromApi();
-
-    this.data.map(i => {
-      i.isActive = true;
-    });
-    console.log(this.data);
   }
 
   ngOnInit(): void {

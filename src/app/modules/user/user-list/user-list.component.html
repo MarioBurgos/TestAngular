@@ -1,10 +1,21 @@
 <div class="row px-3 py-5">
     <div class="col-12">
-        <app-title-h1 [text]="title" type="dark" [priceEuros]="priceEuros" [data]="object"></app-title-h1>
+        <app-title-h1 [text]="title" type="dark" [priceEuros]="priceEuros"></app-title-h1>
 
-        <button class="btn btn-primary" (click)="addEuros()">Add 10€</button>
-
-
+        <p>JSON: {{ object | json }}</p>
+        <p>text: {{ stringVar | uppercase }}</p>
+        <p>Date: {{ dateVar | date }}</p>
+        <p>Date medium: {{ dateVar | date:'medium' }}</p>
+        <p>Date full: {{ dateVar | date:'full' }}</p>
+        <p>Date shortTime: {{ dateVar | date:'shortTime' }}</p>
+        <p>Date hh:mm:ss: {{ dateVar | date:'hh:mm:ss' }}</p>
+        <p>Date fullTime: {{ dateVar | date:'fullTime' }}</p>
+        <p>Currency: {{ currencyVar | currency }}</p>
+        <p>Decimal: {{ decimalVar | number:'3.65' }}</p>
+        <p>Decimal: {{ decimalVar | percent }}</p>
+        <!-- percent takes 1 as 100% -->
+        <br>
+        <p> Custom Pipe: {{user.name | greeting: user.gender:user.role }}</p>
 
 
 

@@ -15,7 +15,7 @@ export class SkeletonComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     setTimeout(() => {
           this.isLoading = false;
-    }, 1000);
+    }, 200);
   }
 
   ngOnInit(): void {
