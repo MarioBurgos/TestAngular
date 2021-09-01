@@ -19,6 +19,7 @@ export class UserListComponent implements OnInit, OnDestroy {
   public title:string;
 
   public priceEuros: number;
+  public object: Array<any>;
 
   constructor(
     private userService: UserService
@@ -28,6 +29,13 @@ export class UserListComponent implements OnInit, OnDestroy {
     this.title = this.userService.getTitle;
 
     this.priceEuros = 0;
+    this.object = [
+      {
+        id: 1,
+        name: "first",
+        joinDate: 1599935113003
+      }
+    ]
   }
   ngOnDestroy(): void {
     if(this.userSubscription){
@@ -44,6 +52,11 @@ export class UserListComponent implements OnInit, OnDestroy {
 
   addEuros(){
     this.priceEuros += 10;
+    this.object.push({
+      id: this.object.length+1,
+      name: 'otro',
+      joinDate: 1599935113003
+    })
   }
 
   getUsers() {
