@@ -1,25 +1,7 @@
 <div class="mbp-login-container p-0">
-    <div class="mbp-login-form col-5 mx-3">
-        <div class="mbp-login-form-content ">
-            <h1>Welcome</h1>
-            <p>Thanks for coming back. Please, fill the form.</p>
-            <div class="mbp-login-form-input">
-                <label>Email*: </label>
-                <input type="email" placeholder="Enter email">
-            </div>
-            <div class="mbp-login-form-input">
-                <label>Password*: </label>
-                <input type="password" placeholder="Enter password">
-            </div>
-            <small>I forgot my password</small>
-            <div class="mbp-login-form-buttons">
-                <button class="mbp-login-form-buttons-signup">
-            Sign Up
-          </button>
-                <button class="mbp-login-form-buttons-signin">
-            Sign In
-          </button>
-            </div>
+    <div class="mbp-login-form col-lg-5 col-xs-12 mx-3">
+        <img [src]="data.LOGO" class="mbp-login-form-logo" alt="">
+        <div class="mbp-login-form mbp-login-form-content" app-login-form>
         </div>
 
         <div class="mbp-login-form-footer">
@@ -29,11 +11,11 @@
                 <a href="#">Blog</a>
             </div>
             <div class="mbp-login-form-footer-socials">
-                <i class="fab fa-linkedin login-form-footer-socials-social"></i>
-                <i class="fab fa-twitter-square login-form-footer-socials-social"></i>
-                <i class="fab fa-instagram-square login-form-footer-socials-social"></i>
+                <a href="#"><i class="fab fa-linkedin login-form-footer-socials-social"></i></a>
+                <a href="#"><i class="fab fa-twitter-square login-form-footer-socials-social"></i></a>
+                <a href="#"><i class="fab fa-instagram-square login-form-footer-socials-social"></i></a>
             </div>
         </div>
     </div>
-    <img src="https://c0.wallpaperflare.com/preview/275/13/117/lock-key-engraving-security.jpg" alt="" class="mbp-login-container-img col-7">
+    <img [src]="data.STYLE_BACKGROUND" alt="" class="mbp-login-container-img col-lg-7 col-xs-0 px-0">
 </div>

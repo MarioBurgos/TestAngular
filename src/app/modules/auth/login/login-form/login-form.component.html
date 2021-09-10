@@ -1,0 +1,24 @@
+<h1>Welcome</h1>
+<p>Thanks for visit us. Please, fill the form.</p>
+<!-- For ReactiveForms module to work properly, it is mandatory to wrap the fields in a <form> tag and bind it with the FormGroup instance (loginForm in this case) -->
+<form [formGroup]="loginForm">
+    <div class="mbp-login-form-input">
+        <label>Email*: </label>
+        <small class="text-danger py-1 px-2" *ngIf="!loginForm.email.isValid()">{{loginForm.email.error}}</small>
+        <input type="email" placeholder="Enter email" [(ngModel)]="loginForm.email.val">
+    </div>
+    <div class="mbp-login-form-input">
+        <label>Password*: </label>
+        <small class="text-danger py-1 px-2" *ngIf="!loginForm.password.isValid() && password.touched">{{loginForm.password.error}}</small>
+        <input type="password" placeholder="Enter password" [(ngModel)]="loginForm.password.val" #password="ngModel">
+    </div>
+    <small><a href="#!">I forgot my password</a> </small>
+    <div class="mbp-login-form-buttons">
+        <button class="mbp-login-form-buttons-signup">
+Sign Up
+</button>
+        <button class="mbp-login-form-buttons-signin" [disabled]="!isValidForm" (click)="authenticate()">
+Sign In
+</button>
+    </div>
+</form>
